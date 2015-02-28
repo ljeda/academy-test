@@ -1,4 +1,5 @@
 class CitiesController < ApplicationController
+  before_filter :authenticate_user!
 
   def index
     @cities = City.paginate(:page => params[:page])
