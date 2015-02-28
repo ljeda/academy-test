@@ -1,0 +1,4 @@
+<h3>City</h3>
+<p>Name: <%= @city.name if @city.name %></p>
+<p>Short name: <%= @city.short_name if @city.short_name %></p>
+<p><%= link_to 'Edit', edit_city_path(@city) %></p>

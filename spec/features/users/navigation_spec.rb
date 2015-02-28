@@ -15,6 +15,8 @@ feature 'Restricted navigation links', :devise do
     expect(page).to have_content 'Edit account'
     expect(page).to have_content 'Sign out'
     expect(page).to have_content 'Users'
+    expect(page).to have_content 'Cities'
+    expect(page).to have_content 'Create City'
   end
 
   # Scenario: Routes correctly to custom users route

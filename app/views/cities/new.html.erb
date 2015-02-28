@@ -1,0 +1,28 @@
+<h3>New City</h3>
+
+<%= form_for :city, url: cities_path do |f| %>
+  <% if !@city.nil? && @city.errors.any? %>
+    <div id="error_explanation">
+      <h4>
+        <%= pluralize(@city.errors.count, "error") %> prohibited this city from being saved:
+      </h4>
+      <ul>
+        <% @city.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <table>
+      <tr>
+        <td><%= f.label :name %></td>
+        <td><%= f.text_field :name %></td>
+      </tr><tr>
+        <td><%= f.label :short_name %></td>
+        <td><%= f.text_field :short_name %></td>
+      </tr>
+    </table>
+    <%= f.submit 'Create', :class => 'button right' %>
+  </div>
+<% end %>
