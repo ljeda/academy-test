@@ -1,0 +1,1 @@
+$(document).ready -> alert window.current_user_name if window.current_user_name
